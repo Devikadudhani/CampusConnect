@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/parentTabLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:tabTextColor="#B278F2"
+        app:tabSelectedTextColor="#FFFFFF"
+        app:tabIndicatorColor="#B278F2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5FF">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <!-- Title -->
+            <TextView
+                android:text="Admin Dashboard"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#7B1FA2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Placeholder section for the list of users with complaints -->
+            <Button
+                android:id="@+id/btnExistingUsers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Existing Users"
+                android:layout_margin="16dp"
+                android:backgroundTint="#5E35B1"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"/>
+
+            <!-- Assign Complaints to Departments -->
+            <TextView
+                android:text="Complaints"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#5C6BC0"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" />
+
+            <!-- RecyclerView for complaints -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/complaintsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"/>
+
+            <!-- Complaint Trends (Placeholder for Graph) -->
+            <TextView
+                android:text="Complaint Trends"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#5C6BC0"/>
+
+            <!-- BarChartView for Complaint Trends -->
+            <com.example.myapplication1.BarChartView
+                android:id="@+id/complaintsBarChart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"  />
+
+            <!-- ✅ View More Button (NEWLY ADDED) -->
+            <TextView
+                android:id="@+id/viewMoreButton"
+                android:text="View More →"
+                android:textSize="16sp"
+                android:textColor="#5C6BC0"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Poll/Feedback Section -->
+            <TextView
+                android:text="Poll/Feedback Section"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#5C6BC0"/>
+
+            <TextView
+                android:text="Poll: How satisfied are you with cafeteria food quality?\nVery satisfied: 26%\nSatisfied: 7%\nDissatisfied: 21%\nVery Dissatisfied: 20%"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textColor="#000000" />
+
+
+            <!-- Dashboard Buttons -->
+            <Button
+                android:id="@+id/leaderboardButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Complaint Resolution Stats"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/pollsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Polls"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/notificationsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notifications"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/suggestionBoxButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suggestion Box"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/feedbackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View App Feedback"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="80dp"   />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom1_nav_menu"
+        android:elevation="30dp"/>
+</RelativeLayout>

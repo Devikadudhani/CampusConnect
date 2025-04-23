@@ -54,7 +54,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
-
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 //     Jetpack Compose
     implementation(platform("androidx.compose:compose-bom:2023.08.00"))
     implementation("androidx.compose.ui:ui")
@@ -75,6 +75,7 @@ dependencies {
     implementation("androidx.compose.material:material:1.6.6")
     implementation("androidx.compose.ui:ui-tooling-preview:1.6.6")
     debugImplementation("androidx.compose.ui:ui-tooling:1.6.6")
+    implementation("com.google.firebase:firebase-storage:20.3.0")
 
     // Testing
     testImplementation(libs.junit)

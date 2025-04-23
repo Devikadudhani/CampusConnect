@@ -2,4 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="purple">#6200EE</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="colorPrimary">#6200EE</color> <!-- You can change this to any color -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- For darker shade, if needed -->
+    <color name="colorAccent">#03DAC5</color> <!-- For accent color -->
+    <color name="light_purple">#D1C4E9</color><!-- Replace with your desired color code -->
+    <color name="pastel_pink">#FFB6C1</color> <!-- You can adjust this to any pastel pink color -->
+
 </resources>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -26,9 +27,76 @@
         <activity android:name=".StudentActivity" />
         <activity android:name=".RoleSelectionActivity"/>
         <activity android:name=".AdminLoginActivity" />
-        <activity android:name=".AdminDashboardActivity" />
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".AdminSignUpActivity" />
+        <activity
+            android:name=".StudentLoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CreatePasswordActivity" />
+        <activity android:name=".ExistingUserLoginActivity" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Home Activity -->
+        <activity
+            android:name=".StudentHomeActivity"
+            android:exported="false" />
+
+        <!-- Track Complaint Activity -->
+        <activity
+            android:name=".TrackComplaintActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SurveyActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Complaint screen -->
+        <activity android:name=".ComplaintActivity" />
+
+        <activity android:name=".ProfileActivity"></activity>
+        <!-- Directly opening AdminDashboard -->
+        <activity
+            android:name=".AdminDashboardActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".UserDetailsActivity" />
+        <activity android:name=".LeaderboardActivity" />
+
+
+        <!-- Adding the Suggestion Box Activity -->
+        <activity
+            android:name=".SuggestionBoxActivity"
+            android:exported="true" />
+
+        <activity android:name=".CreatePollActivity" />
+        <activity android:name=".AllComplaintTrendsActivity" />
+        <activity android:name=".MoreGraphActivity"/>
+        <activity android:name=".AdminProfileActivity"/>
+
+
+
     </application>
 
 </manifest>

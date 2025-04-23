@@ -19,7 +19,7 @@ class RoleSelectionActivity : AppCompatActivity() {
         }
 
         studentTile.setOnClickListener {
-            val intent = Intent(this, StudentActivity::class.java)
+            val intent = Intent(this, StudentLoginActivity::class.java)
             startActivity(intent)
         }
     }

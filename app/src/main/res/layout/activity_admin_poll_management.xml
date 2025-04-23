@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Title: Create Poll -->
+    <TextView
+        android:id="@+id/createPollTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Poll"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp" />
+
+    <!-- Poll Question Input -->
+    <EditText
+        android:id="@+id/pollQuestionInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Poll Question"
+        android:minHeight="48dp"
+        android:padding="10dp" />
+
+    <!-- Poll Option 1 Input -->
+    <EditText
+        android:id="@+id/pollOption1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Option 1"
+        android:minHeight="48dp"
+        android:padding="10dp" />
+
+    <!-- Poll Option 2 Input -->
+    <EditText
+        android:id="@+id/pollOption2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Option 2"
+        android:minHeight="48dp"
+        android:padding="10dp" />
+
+    <!-- Create Poll Button -->
+    <Button
+        android:id="@+id/createPollButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Poll"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"/>
+
+    <!-- RecyclerView for Poll Results -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pollResultsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</LinearLayout>
